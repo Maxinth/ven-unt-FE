@@ -24,8 +24,8 @@ const ContactAndEmail = () => {
   const { accountEmail, alternativeEmail } = account;
 
   return (
-    <div className="mt-6 p-4 text-[14px] leading-[20px]">
-      <div className="mb-[20px]">
+    <div className="mt-6 p-4 text-[14px] leading-[20px] md:flex border-b pb-[20px] border-b-[#EAECF0]">
+      <div className="mb-[20px] md:mr-[100px]">
         <p className=" text-[#344054] font-medium ">Contact email</p>
         <span className="text-[#667085] font-normal">
           Where should invoices be sent?
@@ -36,7 +36,7 @@ const ContactAndEmail = () => {
           <img
             src={accountEmail ? Checked : Unchecked}
             alt="check icon"
-            className="relative top-1"
+            className="relative top-1 cursor-pointer"
             onClick={() => handleClick("accountEmail")}
           />
           <div className="ml-2">
@@ -52,21 +52,21 @@ const ContactAndEmail = () => {
           <img
             src={alternativeEmail ? Checked : Unchecked}
             alt="check icon"
-            className="relative top-1"
+            className="relative top-1 cursor-pointer"
             onClick={() => handleClick("alternativeEmail")}
           />
           <div className="ml-2">
             <p className="text-[#344054] font-medium mb-[12px]">
               Send to an alternative email
             </p>
-            <span className="text-[#667085] px-[14px] border border-[#D0D5DD] font-normal flex items-center  rounded-[8px]">
+            <div className="ml-3 text-[#667085] pl-[14px] border border-[#D0D5DD] font-normal flex items-center  rounded-[8px] w-full min-w-fit max-w-[319px] md:w-[488px]">
               <img src={Mail} alt="" />{" "}
               <input
                 type="text"
                 placeholder="billing@untitledui.com"
-                className="outline-none px-[14px] py-[10px]"
+                className="outline-none px-[14px] py-[10px] w-full rounded-[8px]"
               />
-            </span>
+            </div>
           </div>
         </div>
       </section>

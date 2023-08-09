@@ -13,7 +13,7 @@ const SettingsAndPayment = () => {
           {data?.map((item) => (
             <span
               key={item}
-              className="min-w-[120px] max-w-[150px] border border-r-[#D0D5DD] px-[9px] py-[16px] flex items-center justify-center"
+              className="min-w-[120px] max-w-[150px] border border-r-[#D0D5DD] px-[9px] py-[10px] flex items-center justify-center"
             >
               {item}
             </span>
