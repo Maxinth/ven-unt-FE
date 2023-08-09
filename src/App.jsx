@@ -1,3 +1,4 @@
+import CardDetails from "./components/CardDetails";
 import ContactAndEmail from "./components/ContactAndEmail";
 import Navbar from "./components/Navbar";
 import SettingsAndPayment from "./components/SettingsAndPayment";
@@ -8,6 +9,7 @@ function App() {
   const [openMobileSideBar, setOpenMobileSideBar] = useState(false);
   const toggleMobileSideBarView = () =>
     setOpenMobileSideBar(!openMobileSideBar);
+
   return (
     <main className="relative w-full">
       <Navbar toggleMobileSideBarView={toggleMobileSideBarView} />
@@ -16,6 +18,7 @@ function App() {
         <section className="bg-[#F9FAFB] mt-6 w-full md:px-[24px]">
           <SettingsAndPayment />
           <ContactAndEmail />
+          <CardDetails />
         </section>
       </div>
     </main>
