@@ -10,7 +10,7 @@ const Sidebar = ({ isMobileSideBarOpen }) => {
   const { topSection, bottomSection } = dashboardSideBarData;
   return (
     <div
-      className={`absolute top-0 max-w-[279px] left-0 p-2 px-[24px] border border-red-500 w-2/3 ease-in duration-300 z-50 bg-white  ${
+      className={`absolute -top-6 max-w-[279px] left-0 p-2 px-[24px] border border-red-500 w-2/3 ease-in duration-300 z-50 bg-white  ${
         !isMobileSideBarOpen ? "translate-x-[0px]" : "-translate-x-full"
       }`}
     >

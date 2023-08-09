@@ -11,7 +11,7 @@ function App() {
     <main className="relative w-full">
       <Navbar toggleMobileSideBarView={toggleMobileSideBarView} />
       <Sidebar isMobileSideBarOpen={openMobileSideBar} />
-      <section className="bg-[#F9FAFB]">
+      <section className="bg-[#F9FAFB] mt-6">
         <SettingsAndPayment />
       </section>
     </main>
