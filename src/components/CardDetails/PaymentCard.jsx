@@ -21,23 +21,56 @@ const PaymentCard = ({ text, cardIcon, handleCardClick, card }) => {
       return Unchecked;
     }
   };
+
+  const isActiveCard = () => {
+    if (visa && text === "Visa") {
+      return true;
+    }
+
+    if (!visa && text === "Visa") {
+      return false;
+    }
+
+    if (mastercard && text === "Mastercard") {
+      return true;
+    }
+    if (!mastercard && text === "Mastercard") {
+      return false;
+    }
+  };
   return (
     <div
-      className="group cursor-pointer flex items-start justify-between mb-3 ease-in bg-[#F9F5FF] rounded-lg p-4 border border-[#D6BBFB"
+      className={`group cursor-pointer flex items-start justify-between mb-3 ease-in ${
+        isActiveCard() ? "bg-[#F9F5FF]" : "bg-white"
+      } rounded-lg p-4 border border-[#D6BBFB`}
       onClick={() => handleCardClick(text?.toLowerCase())}
     >
       <div className="flex items-start">
         <img src={cardIcon} alt="visa" />
         <div className="ml-3">
-          <p className="text-[#344054] group-hover:text-[#53389E] font-medium">
+          <p
+            className={` ${
+              isActiveCard() ? "text-[#53389E]" : "text-[#344054]"
+            } font-medium`}
+          >
             {text} ending in 1234
           </p>
-          <p className="text-[#7F56D9]">Expiry 06/2024</p>
+          <p className={`${isActiveCard() ? "text-[#7F56D9]" : "#667085"} `}>
+            Expiry 06/2024
+          </p>
           <div className="mt-2">
-            <span className="text-[#667085] group-hover:text-[#9E77ED] font-medium mr-3">
+            <span
+              className={`${
+                isActiveCard() ? "text-[#9E77ED]" : "text-[#667085] "
+              } font-medium mr-3`}
+            >
               Set as default
             </span>
-            <span className="text-[#667085] group-hover:text-[#6941C6] font-medium">
+            <span
+              className={`${
+                isActiveCard() ? "text-[#6941C6]" : "text-[#667085] "
+              } font-medium`}
+            >
               Edit
             </span>
           </div>

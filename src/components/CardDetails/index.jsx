@@ -3,7 +3,7 @@ import { cardData } from "./data";
 import { useState } from "react";
 
 const CardDetails = () => {
-  const [card, setCard] = useState({ visa: true, masterCard: false });
+  const [card, setCard] = useState({ visa: true, mastercard: false });
 
   const cardReset = {
     visa: false,
