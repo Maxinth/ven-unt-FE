@@ -1,3 +1,4 @@
+import ContactAndEmail from "./components/ContactAndEmail";
 import Navbar from "./components/Navbar";
 import SettingsAndPayment from "./components/SettingsAndPayment";
 import Sidebar from "./components/Sidebar";
@@ -14,6 +15,7 @@ function App() {
         <Sidebar isMobileSideBarOpen={openMobileSideBar} />
         <section className="bg-[#F9FAFB] mt-6">
           <SettingsAndPayment />
+          <ContactAndEmail />
         </section>
       </div>
     </main>
