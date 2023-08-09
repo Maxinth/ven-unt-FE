@@ -1,9 +1,31 @@
 import Checked from "../../assets/check-mark.svg";
+import Unchecked from "../../assets/checkbox-unchecked.svg";
 import PropTypes from "prop-types";
 
-const PaymentCard = ({ text, cardIcon }) => {
+const PaymentCard = ({ text, cardIcon, handleCardClick, card }) => {
+  const { visa, mastercard } = card;
+
+  const getCardCheckStatus = () => {
+    if (visa && text === "Visa") {
+      return Checked;
+    }
+
+    if (!visa && text === "Visa") {
+      return Unchecked;
+    }
+
+    if (mastercard && text === "Mastercard") {
+      return Checked;
+    }
+    if (!mastercard && text === "Mastercard") {
+      return Unchecked;
+    }
+  };
   return (
-    <div className="group flex items-start justify-between mb-3 ease-in bg-[#F9F5FF] rounded-lg p-4 border border-[#D6BBFB">
+    <div
+      className="group cursor-pointer flex items-start justify-between mb-3 ease-in bg-[#F9F5FF] rounded-lg p-4 border border-[#D6BBFB"
+      onClick={() => handleCardClick(text?.toLowerCase())}
+    >
       <div className="flex items-start">
         <img src={cardIcon} alt="visa" />
         <div className="ml-3">
@@ -21,7 +43,7 @@ const PaymentCard = ({ text, cardIcon }) => {
           </div>
         </div>
       </div>
-      <img src={Checked} alt="check" />
+      <img src={getCardCheckStatus()} alt="check" className="cursor-pointer" />
     </div>
   );
 };
@@ -29,6 +51,8 @@ const PaymentCard = ({ text, cardIcon }) => {
 PaymentCard.propTypes = {
   text: PropTypes.string,
   cardIcon: PropTypes.string,
+  handleCardClick: PropTypes.func,
+  card: PropTypes.object,
 };
 
 export default PaymentCard;

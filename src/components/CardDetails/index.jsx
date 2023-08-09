@@ -7,7 +7,7 @@ const CardDetails = () => {
 
   const cardReset = {
     visa: false,
-    masterCard: false,
+    mastercard: false,
   };
 
   const handleCardClick = (id) => {
