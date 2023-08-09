@@ -1,7 +1,7 @@
 import { data } from "./data";
 const SettingsAndPayment = () => {
   return (
-    <section className="pt-20">
+    <section className="pt-20 md:pt-0">
       <div className="p-4">
         <p className="text-[#101828] text-2xl font-medium">Settings</p>
         <span className="font-normal text-base text-[#667085] mb-6">
@@ -20,10 +20,13 @@ const SettingsAndPayment = () => {
           ))}
         </div>
       </div>
-      <div className="px-4">
+      <div className="px-4 pb-[20px] border-b border-b-[#EAECF0]">
         <p className="text-[#101828] text-[18px] leading-[28px] font-medium">
           Payment method
         </p>
+        <span className="text-[14px] leading-[20px]">
+          Update your billing details and address.
+        </span>
       </div>
     </section>
   );

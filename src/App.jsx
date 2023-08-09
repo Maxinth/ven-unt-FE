@@ -10,10 +10,12 @@ function App() {
   return (
     <main className="relative w-full">
       <Navbar toggleMobileSideBarView={toggleMobileSideBarView} />
-      <Sidebar isMobileSideBarOpen={openMobileSideBar} />
-      <section className="bg-[#F9FAFB] mt-6">
-        <SettingsAndPayment />
-      </section>
+      <div className="block md:flex">
+        <Sidebar isMobileSideBarOpen={openMobileSideBar} />
+        <section className="bg-[#F9FAFB] mt-6">
+          <SettingsAndPayment />
+        </section>
+      </div>
     </main>
   );
 }
