@@ -1,6 +1,21 @@
 import PaymentCard from "./PaymentCard";
+import { cardData } from "./data";
+import { useState } from "react";
 
 const CardDetails = () => {
+  const [card, setCard] = useState({ visa: true, masterCard: false });
+
+  const cardReset = {
+    visa: false,
+    masterCard: false,
+  };
+
+  const handleCardClick = (id) => {
+    setCard({
+      ...cardReset,
+      [id]: !card[id],
+    });
+  };
   return (
     <section className="text-[14px] p-4">
       <div>
@@ -10,7 +25,14 @@ const CardDetails = () => {
         </span>
       </div>
       <div>
-        <PaymentCard />
+        {cardData?.map((item) => (
+          <PaymentCard
+            {...item}
+            key={item?.text}
+            handleCardClick={handleCardClick}
+            card={card}
+          />
+        ))}
       </div>
     </section>
   );
