@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar";
+import SettingsAndPayment from "./components/SettingsAndPayment";
 import Sidebar from "./components/Sidebar";
 import { useState } from "react";
+
 function App() {
   const [openMobileSideBar, setOpenMobileSideBar] = useState(false);
   const toggleMobileSideBarView = () =>
@@ -9,6 +11,9 @@ function App() {
     <main className="relative w-full">
       <Navbar toggleMobileSideBarView={toggleMobileSideBarView} />
       <Sidebar isMobileSideBarOpen={openMobileSideBar} />
+      <section className="bg-[#F9FAFB]">
+        <SettingsAndPayment />
+      </section>
     </main>
   );
 }

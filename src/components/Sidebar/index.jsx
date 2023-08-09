@@ -4,16 +4,17 @@ import Search from "../../assets/search.svg";
 import SideBarItem from "./SideBarItem";
 import { dashboardSideBarData } from "./data";
 import NewFeatures from "./NewFeatures";
+import Contact from "./Contact";
 
 const Sidebar = ({ isMobileSideBarOpen }) => {
   const { topSection, bottomSection } = dashboardSideBarData;
   return (
     <div
-      className={`absolute top-2 max-w-[279px] left-2 p-2 px-[24px] border border-red-500 w-2/3 ease-in duration-300 z-50 bg-white  ${
+      className={`absolute top-0 max-w-[279px] left-0 p-2 px-[24px] border border-red-500 w-2/3 ease-in duration-300 z-50 bg-white  ${
         !isMobileSideBarOpen ? "translate-x-[0px]" : "-translate-x-full"
       }`}
     >
-      <img src={Logo} alt="logo" />
+      <img src={Logo} alt="logo" className="mt-2" />
       <div className="rounded-[8px] border border-gray-200  mt-6 flex items-center pl-[14px] mb-6 ">
         <img src={Search} alt="search" />
         <input
@@ -33,6 +34,7 @@ const Sidebar = ({ isMobileSideBarOpen }) => {
         ))}
       </div>
       <NewFeatures />
+      <Contact />
     </div>
   );
 };
