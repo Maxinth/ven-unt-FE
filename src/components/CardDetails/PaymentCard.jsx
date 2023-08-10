@@ -40,7 +40,7 @@ const PaymentCard = ({ text, cardIcon, handleCardClick, card }) => {
   };
   return (
     <div
-      className={`group cursor-pointer flex items-start justify-between mb-3 ease-in ${
+      className={`group md:w-full cursor-pointer flex items-start flex-wrap justify-between mb-3 ease-in ${
         isActiveCard() ? "bg-[#F9F5FF]" : "bg-white"
       } rounded-lg p-4 border border-[#D6BBFB`}
       onClick={() => handleCardClick(text?.toLowerCase())}

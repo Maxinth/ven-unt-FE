@@ -1,3 +1,4 @@
+import BillingHistory from "./components/BillingHistory";
 import CardDetails from "./components/CardDetails";
 import ContactAndEmail from "./components/ContactAndEmail";
 import Navbar from "./components/Navbar";
@@ -19,6 +20,7 @@ function App() {
           <SettingsAndPayment />
           <ContactAndEmail />
           <CardDetails />
+          <BillingHistory />
         </section>
       </div>
     </main>
