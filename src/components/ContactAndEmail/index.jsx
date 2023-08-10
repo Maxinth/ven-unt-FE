@@ -39,7 +39,10 @@ const ContactAndEmail = () => {
             className="relative top-1 cursor-pointer"
             onClick={() => handleClick("accountEmail")}
           />
-          <div className="ml-2">
+          <div
+            className="ml-2 cursor-pointer"
+            onClick={() => handleClick("accountEmail")}
+          >
             <p className="text-[#344054] font-medium">
               Send to my account email
             </p>
@@ -56,7 +59,10 @@ const ContactAndEmail = () => {
             onClick={() => handleClick("alternativeEmail")}
           />
           <div className="ml-2">
-            <p className="text-[#344054] font-medium mb-[12px]">
+            <p
+              className="text-[#344054] font-medium mb-[12px] cursor-pointer"
+              onClick={() => handleClick("alternativeEmail")}
+            >
               Send to an alternative email
             </p>
             <div className="ml-3 text-[#667085] pl-[14px] border border-[#D0D5DD] font-normal flex items-center  rounded-[8px] w-full min-w-fit max-w-[319px] md:w-[488px]">
