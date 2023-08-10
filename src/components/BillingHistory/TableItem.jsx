@@ -1,6 +1,7 @@
 import CheckIcon from "../../assets/Checkbox.svg";
 import DownloadCloud from "../../assets/download-cloud.svg";
 import PropTypes from "prop-types";
+import PaidCheck from "../../assets/paid-check.svg";
 
 const TableItem = ({ monthText, profiles }) => {
   return (
@@ -18,9 +19,12 @@ const TableItem = ({ monthText, profiles }) => {
         <span className="px-6 py-3 flex items-center justify-center min-w-[140px] bg-[#FFF]">
           {monthText} 1, 2022
         </span>
-        <span className="px-6 py-3 flex items-center justify-center min-w-[110px] bg-[#FFF] ">
-          Paid
-        </span>
+        <div className="px-6 py-3 flex items-center justify-center min-w-[110px] bg-[#FFF] ">
+          <span className="bg-[#ECFDF3] text-[#12B76A] p-2 py-[4px] flex items-center rounded-2xl w-full">
+            <img src={PaidCheck} alt="paid check" className="mr-[4px]" />
+            Paid
+          </span>
+        </div>
         <span className="px-6 py-3 break-words min-w-[150px]  flex items-center justify-end bg-[#FFF]">
           <img src={profiles} alt="people" className="cursor-pointer" />
         </span>
