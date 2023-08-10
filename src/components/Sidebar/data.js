@@ -10,7 +10,7 @@ import reports from "../../assets/flag.svg";
 export const dashboardSideBarData = {
   topSection: [
     { item: "Home", imgSrc: home },
-    { item: "Dashboard", imgSrc: dashBar },
+    { item: "Dashboard", imgSrc: dashBar, count: 10 },
     { item: "Projects", imgSrc: projects },
     { item: "Tasks", imgSrc: tasks },
     { item: "Reporting", imgSrc: reports },
