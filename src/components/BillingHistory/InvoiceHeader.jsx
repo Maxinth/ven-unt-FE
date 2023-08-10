@@ -4,7 +4,7 @@ import CheckIcon from "../../assets/Checkbox.svg";
 const InvoiceHeader = () => {
   return (
     <div className="px-4 bg-[#F9FAFB] text-xs leading-[18px] font-medium text-[#667085] flex md:justify-between items-center ">
-      <div className="flex items-center cursor-pointer min-w-[150px] w-[229px] lg:min-w-[360px]">
+      <div className="flex items-center cursor-pointer min-w-[150px] w-[229px] md:min-w-[360px]">
         <img src={CheckIcon} alt="check" className="cursor-pointer" />
         <span className="ml-3 mr-1">Invoice</span>
         <img src={ArrowDrop} alt="arrow drop" />
