@@ -9,11 +9,11 @@ const InvoiceHeader = () => {
         <span className="ml-3 mr-1">Invoice</span>
         <img src={ArrowDrop} alt="arrow drop" />
       </div>
-      <div className="w-full flex item-center ml-12 ">
-        <span className="px-6 py-3 min-w-[150px] md:pl-2">Amount</span>
-        <span className="px-6 py-3 min-w-[140px] md:pl-2">Date</span>
-        <span className="px-6 py-3 min-w-[130px] md:pl-2">Status</span>
-        <span className="px-6 py-3 break-words min-w-[150px] md:px-0">
+      <div className="w-full flex item-center ml-[82px] md:ml-12">
+        <span className="px-6 py-3 min-w-[150px] pl-2 md:pl-2">Amount</span>
+        <span className="px-6 py-3 min-w-[140px] pl-2 md:pl-2">Date</span>
+        <span className="px-6 py-3 min-w-[130px] pl-2 md:pl-2">Status</span>
+        <span className="px-6 py-3 break-words pl-2 min-w-[150px] md:px-0">
           Users on plan
         </span>
       </div>

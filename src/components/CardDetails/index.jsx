@@ -19,9 +19,9 @@ const CardDetails = () => {
   };
   return (
     <section className="text-[14px] p-4 md:flex w-full overflow-auto">
-      <div className="mb-[20px] md:mr-[160px]">
+      <div className="mb-[20px] md:mr-[30px] md:w-[400px]">
         <p className="font-medium">Card details</p>
-        <span className="font-normal leading-5">
+        <span className="!font-normal leading-5">
           Select default payment method.
         </span>
       </div>

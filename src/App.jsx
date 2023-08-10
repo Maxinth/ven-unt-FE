@@ -16,7 +16,7 @@ function App() {
       <Navbar toggleMobileSideBarView={toggleMobileSideBarView} />
       <div className="block md:flex w-full">
         <Sidebar isMobileSideBarOpen={openMobileSideBar} />
-        <section className="bg-[#F9FAFB] mt-6 w-full md:px-[24px] h-[100vh] overflow-y-auto pb-6">
+        <section className="bg-[#F9FAFB] mt-6 w-full md:px-[24px] h-fit md:h-[100vh] overflow-y-auto pb-6">
           <SettingsAndPayment />
           <ContactAndEmail />
           <CardDetails />

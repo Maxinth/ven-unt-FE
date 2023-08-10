@@ -11,7 +11,7 @@ const Sidebar = ({ isMobileSideBarOpen }) => {
   return (
     <div
       className={`absolute -top-6 min-w-[270px] max-w-[279px] left-0 p-2 px-[24px]  w-2/3 ease-in duration-300 z-50 min-h-[150vh] md:min-h-[100vh] bg-white md:translate-x-[0px] md:relative md:w-[279px] md:top-0 ${
-        !isMobileSideBarOpen ? "translate-x-[0px]" : "-translate-x-full"
+        isMobileSideBarOpen ? "translate-x-[0px]" : "-translate-x-full"
       }`}
     >
       <img src={Logo} alt="logo" className="mt-2" />
