@@ -3,7 +3,9 @@ const SettingsAndPayment = () => {
   return (
     <section className="pt-20 md:pt-0">
       <div className="p-4">
-        <p className="text-[#101828] text-2xl font-medium">Settings</p>
+        <p className="text-[#101828] text-2xl font-medium md:text-3xl">
+          Settings
+        </p>
         <span className="font-normal text-base text-[#667085] mb-6">
           Manage your team and preferences here.
         </span>
@@ -13,7 +15,7 @@ const SettingsAndPayment = () => {
           {data?.map((item) => (
             <span
               key={item}
-              className="min-w-[120px] max-w-[150px] border border-r-[#D0D5DD] px-[9px] py-[10px] flex items-center justify-center"
+              className="min-w-[120px] max-w-[150px] border border-r-[#D0D5DD] px-[9px] py-[10px] flex items-center justify-center text-sm"
             >
               {item}
             </span>
