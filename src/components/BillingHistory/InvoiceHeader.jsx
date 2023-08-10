@@ -13,7 +13,7 @@ const InvoiceHeader = () => {
         <span className="px-6 py-3 min-w-[150px] md:pl-2">Amount</span>
         <span className="px-6 py-3 min-w-[140px] md:pl-2">Date</span>
         <span className="px-6 py-3 min-w-[130px] md:pl-2">Status</span>
-        <span className="px-6 py-3 break-words min-w-[150px] md:pl-2">
+        <span className="px-6 py-3 break-words min-w-[150px] md:px-0">
           Users on plan
         </span>
       </div>
