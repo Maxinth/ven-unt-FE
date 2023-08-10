@@ -1,9 +1,14 @@
 import InvoiceHeader from "./InvoiceHeader";
+import TableItem from "./TableItem";
 
 const Table = () => {
   return (
-    <div className="px-4 mx-3 shadow-md rounded-sm overflow-x-auto">
+    <div className="mx-3 shadow-md rounded-sm overflow-x-auto">
       <InvoiceHeader />
+      <TableItem />
+      <TableItem />
+      <TableItem />
+      <TableItem />
     </div>
   );
 };
